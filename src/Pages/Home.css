@@ -1,0 +1,153 @@
+.home{
+    background-image: url('https://wallpapers.com/images/hd/sandy-garuda-cifmyh543ni9a3ab.jpg');
+    background-repeat: no-repeat;
+    background-size:  100% 100%;
+	
+    height: 80vh;
+    width: 100%;
+    position: relative;
+	
+
+}
+
+.home2{
+    background-image: url('https://png.pngtree.com/background/20210717/original/pngtree-old-paper-vintage-with-grunge-effect-picture-image_1414138.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+     width: 100%;
+
+	 display: flex;
+	align-items: center;
+	justify-content: center; 
+   
+}
+
+
+
+img{
+    width: 550px;
+    height: 400px;
+}
+
+
+
+
+.book {
+	width: 400px;
+	height: 540px;
+	
+	position: relative;
+	transition-duration: 1s;
+	perspective: 1500;
+}
+input {
+	display: none;
+}
+.cover, .back-cover {
+	/* background-color: #4173a5; */
+    background-image: url('https://i.ibb.co/xmQ1CKk/Picsart-24-09-17-16-40-57-624.jpg');
+    background-repeat: no-repeat; 
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+   
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center left;
+}
+.cover {
+	position: absolute;
+	z-index: 4;
+	transition: transform 1s;
+}
+.cover label {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.back-cover {
+	position: relative;
+	z-index: -1;
+}
+.page {
+	position: absolute;
+	background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA2L3JtNjY1LWxnLWgxLTAxMC5qcGc.jpg');
+	background-size: cover;
+	width: 370px;
+	height: 510px;
+	
+	border-radius: 0 15px 15px 0;
+	margin-top: 10px;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition-duration: 1.5s;
+}
+
+.front-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.back-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 99;
+}
+.next, .prev {
+	position: absolute;
+	bottom: 1em;
+	cursor: pointer;
+}
+.next {
+	right: 1em;
+}
+.prev {
+	left: 1em;
+}
+#page1 {
+	z-index: 3;
+}
+#page2 {
+	z-index: 2;
+}
+#page3 {
+	z-index: 1;
+}
+
+
+#checkbox-cover:checked ~ .book {
+	transform: translateX(200px);
+}
+#checkbox-cover:checked ~ .book .cover {
+	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+#checkbox-cover:checked ~ .book .page {
+	box-shadow: 0 0 3px rgb(99, 98, 98);
+}
+#checkbox-page1:checked ~ .book #page1 {
+	transform: rotateY(-180deg);
+	z-index: 2;
+}
+#checkbox-page2:checked ~ .book #page2 {
+	transform: rotateY(-180deg);
+	z-index: 3;
+}
+
+
+
+
+
+
